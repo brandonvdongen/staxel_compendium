@@ -1,0 +1,267 @@
+img#beta-flag {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: myFirstCrush;
+    src: url(../assets/font/MyFirstCrush.ttf);
+}
+
+* {
+    font-family: myFirstCrush, arial, serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: url("../images/bg.png") fixed;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 190px 50px 250px 100%;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto auto;
+    overflow-y: scroll;
+}
+
+.copyright {
+    grid-column: 2/3;
+    font-size: 15px;
+    color: lightgrey;
+    text-align: center;
+    grid-row: 2/3;
+}
+
+.notification {
+    grid-template-rows: 1fr 4fr 100px;
+    display: grid;
+    position: fixed;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#notification_container:before {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    background: black;
+    opacity: 0.5;
+}
+
+.notification .button {
+    margin: 20px;
+    border: 0;
+    background: #FF852E;
+    color: #F7F174;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.notification .button:hover {
+    background: #fa7313;
+}
+
+.notification, .container {
+    color: black;
+    border: 30px solid #FFDA4F;
+    border-left: 30px solid darkorange;
+    border-right: 30px solid darkorange;
+    background: #F1E4BD;
+    box-shadow: 0 10px 0 #FFA239, 0 10px 0 #FFA239 inset, 0 30px 0 #F1DB99 inset;
+}
+
+.list_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 550px;
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+.crafting_container {
+    display: grid;
+    grid-template-columns: 350px 300px;
+    grid-gap: 5px;
+    min-width: 550px;
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+.crafting_sub_container {
+    padding: 20px;
+}
+
+.item, .item_header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    max-height: 30px;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.recipe {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 30px;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+img.petal-icon {
+    width: 30px;
+    padding: 4px;
+}
+
+.name, .buy, .sell {
+    display: flex;
+    align-items: center;
+}
+
+.buy, .sell {
+    justify-content: flex-end;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.logo img {
+    width: 400px;
+    height: 189px;
+}
+
+.feedback {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+.feedback a {
+    background: #4885ed;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.feedback a:hover {
+    background: #3F51B5;
+}
+
+label {
+    font-size: 30px;
+}
+
+#search, #crafting_search {
+    background: #EDCF9A;
+    border: 0;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.notification .title {
+    display: inherit;
+    text-align: center;
+    font-size: 60px;
+    align-content: center;
+}
+
+.notification .text {
+    margin: 20px;
+    font-size: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    background: #FFE671;
+    color: #F9802E;
+}
+
+.mode_menu {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    grid-row-gap: 5px;
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+    width: fit-content;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-column-gap: 5px;
+    width: fit-content;
+    justify-content: left;
+    align-items: center;
+}
+
+.radio input[type="radio"] {
+    height: 90px;
+    width: 140px;
+    display: none;
+}
+
+.radio input[type="radio"] ~ span {
+    height: 90px;
+    width: 140px;
+    background-size: 420px 90px;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.radio.buytab input[type="radio"] ~ span {
+    background-image: url("../images/BuyTab.png");
+}
+
+.radio.craftingtab input[type="radio"] ~ span {
+    background-image: url("../images/CraftingTab.png");
+}
+
+.radio:hover input[type="radio"] ~ span {
+    background-position: right;
+}
+
+.radio input[type="radio"]:checked ~ span {
+    background-position: left;
+}
+
+#item_list, #crafting_list {
+    background-color: #E3D1AE;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.hidden {
+    display: none;
+}

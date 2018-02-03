@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staxel Crafting Compendium</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/item.class.js"></script>
+    <script src="js/recipe.class.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<img src="images/beta-banner.png" alt="beta banner" id="beta-flag">
+<div id="notification_container">
+    <div class="notification">
+        <div class="title">Notice</div>
+        <div class="text">Not everything on the site is finished or even functional yet, please leave feedback in the bottom left!.<br><br>- PF_Cactus
+        </div>
+        <button class="button">Close</button>
+    </div>
+</div>
+<div class="logo"><img src="images/logo.png"></div>
+<p class="copyright">all rights for the artwork featured on this website belong to the Plukit team, creators of
+    Staxel.</p>
+
+<div class="mode_menu">
+    <label class="radio buytab" id="buytab"><input title="item list" type="radio" value="itemlist" name="mode" checked><span></span></label>
+    <label class="radio craftingtab" id="craftingtab"><input title="crafting menu" type="radio" value="craftingmenu" name="mode"><span></span></label>
+</div>
+<div class="list_container container" id="list_container">
+    <div class="search_menu">
+        <label for="search">Search:</label>
+        <input class="search" id="search" type="text" placeholder="">
+    </div>
+    <div id="item_header" class="item_header">
+        <div class="name">Name</div>
+        <div class="buy">Buy Price</div>
+        <div class="sell">Sell Price</div>
+    </div>
+    <div id="item_list">
+
+        <div class="item">
+            <div class="name">Loading language data.. please wait</div>
+        </div>
+    </div>
+
+</div>
+<div class="crafting_container hidden" id="crafting_container">
+    <div class="crafting_sub_container container">
+        <div class="search_menu">
+            <label for="search">Search:</label>
+            <input class="search" id="crafting_search" type="text" placeholder="">
+        </div>
+        <div id="crafting_header" class="crafting_header">
+            <div class="name">Recipe</div>
+        </div>
+        <div id="crafting_list">
+            <div class="item">
+                <div class="name">Loading language data.. please wait</div>
+            </div>
+        </div>
+    </div>
+    <div class="crafting_result_container container">
+    </div>
+</div>
+<div class="feedback">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf82uNX2M9mY_yVhJIrGW6GeMWLpOXvml4os4St30sGXGLbmw/viewform?usp=sf_link" target="_blank">Feedback</a>
+</div>
+</body>
+</html>
